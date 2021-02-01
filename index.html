@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving square</title>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
         #section1 {
-            height: 1000px;
-            background-color: turquoise;
-        }
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+    position: relative;
+    animation-name: anything;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
 
-        #section2 {
-            height: 1000px;
-            background-color: greenyellow;
-        }
+@keyframes anything {
+    0% {left: 0px; top: 0px;}
+    25% {left: 500px;}
+    50% {top: 500px;}
+    75% {left: 0px;}
+    100% {top: 0px;}
+}
+
+#section2 {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position: relative;
+    animation-name: anything2;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes anything2 {
+    0% {left: 0px; top: 0px;}
+    25% {left: 550px;}
+    50% {top: 550px;}
+    75% {left: 0px;}
+    100% {top: 0px;}
+}
     </style>
 </head>
 <body>
-
-    <div class="main" id="section1">
-    <button onclick='alert("Hi!")'>Suprise!</button>
-        <h2>SECTION 1</h2>
-        <a href="#section2">oh hai</a>
-    </div>
-    <div class="main" id="section2">
-        <h2>SECTION 2</h2>
-        <a href="#section1">OOO hai</a>
-    </div>
+   <div class="main" id="section1"></div> 
+   <div class="main"  id="section2"></div> 
 </body>
 </html>
